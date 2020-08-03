@@ -1,0 +1,97 @@
+{
+  "id": "f94a953a-e8e0-484b-a844-7a2b21c9bd22",
+  "version": "2.0",
+  "name": "Onliner Catalog",
+  "url": "https://catalog.onliner.by",
+  "tests": [{
+    "id": "2731c1cf-e7ce-401d-bf3a-4c30997ca77d",
+    "name": "Untitled",
+    "commands": [{
+      "id": "17a64fc9-c2d7-4569-993d-8cebeda64b8b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9952c5ef-a3fa-432a-a0b5-ea51910bf7e4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "398b2982-bc2b-425b-a4ec-d68c3636fa5d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.auth-bar__item--text",
+      "targets": [
+        ["css=.auth-bar__item--text", "css:finder"],
+        ["xpath=//div[@id='userbar']/div[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a773d912-2d42-45b7-b9ba-217db3fdb4f8",
+      "comment": "",
+      "command": "type",
+      "target": "css=.auth-form__group > .auth-form__row .auth-input",
+      "targets": [
+        ["css=.auth-form__group > .auth-form__row .auth-input", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='auth-container']/div/div[2]/div/form/div/div/div[2]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "sidneyandtanya@yandex.ru"
+    }, {
+      "id": "d3622c49-e8a5-4069-bedb-b365a6e72232",
+      "comment": "",
+      "command": "type",
+      "target": "css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input",
+      "targets": [
+        ["css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input", "css:finder"],
+        ["xpath=(//input[@type='text'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='auth-container']/div/div[2]/div/form/div[2]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "sidsidsid11"
+    }, {
+      "id": "92bb7a6e-deb4-4ef4-8a1e-efb6a3639668",
+      "comment": "",
+      "command": "click",
+      "target": "css=.auth-button_primary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7dfd229c-211a-486e-bbb2-1f09abb2261b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.b-top-profile__preview",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6e22b73-1535-4d62-ba65-526168160363",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Выйти",
+      "targets": [
+        ["linkText=Выйти", "linkText"],
+        ["css=.b-top-profile__logout > .b-top-profile__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Выйти')])[2]", "xpath:link"],
+        ["xpath=//div[@id='userbar']/div/div/div/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "32a7ebf5-4d62-4697-bde8-70c2114703f0",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2731c1cf-e7ce-401d-bf3a-4c30997ca77d"]
+  }],
+  "urls": ["https://catalog.onliner.by/"],
+  "plugins": []
+}
