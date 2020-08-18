@@ -1,0 +1,112 @@
+{
+  "id": "5075d50d-2991-46b6-bb51-09d59bf39baa",
+  "version": "2.0",
+  "name": "Test dz1",
+  "url": "https://www.abw.by",
+  "tests": [{
+    "id": "50e681c6-e1c4-4430-b111-e7505f2acc6e",
+    "name": "Test4",
+    "commands": [{
+      "id": "577ccc52-bdcb-4f5a-9a51-5f02e452e89f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa8760fb-d8ae-41f0-b5db-7284b967cb07",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e58cecf-6e17-4e27-9270-463252db2a4c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Автовозы",
+      "targets": [
+        ["linkText=Автовозы", "linkText"],
+        ["css=.b-content_layout .b-col_item:nth-child(3) > .b-rn_list:nth-child(2) > li:nth-child(2) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Автовозы')])[3]", "xpath:link"],
+        ["xpath=(//div[@id='j-search_mlist']/div[3]/ul[2]/li[2]/a)[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://avto.abw.by/belarus/spectehnika/rent/tip_avtovoz')])[3]", "xpath:href"],
+        ["xpath=//div[24]/div/div/div[3]/ul[2]/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad62eb7f-aebb-4ebd-ac68-aa140f3f45ae",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Коммунальная",
+      "targets": [
+        ["linkText=Коммунальная", "linkText"],
+        ["css=.b-main_menu > li:nth-child(2) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Коммунальная')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://avto.abw.by/belarus/spectehnika/prodazha/gruppa_kommunalynaya')])[2]", "xpath:href"],
+        ["xpath=//div[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "070b8260-2402-465a-b6e4-7054554fed27",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cr-mobile_hide > .b-post_add",
+      "targets": [
+        ["css=.cr-mobile_hide > .b-post_add", "css:finder"],
+        ["xpath=(//a[contains(text(),'Подать объявление')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://users.abw.by/add?rubric=spectehnika')])[2]", "xpath:href"],
+        ["xpath=//div[4]/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b77cecbf-c89f-4175-9cfa-43ec731a36bd",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=form:nth-child(2) .b-elem_w_inp:nth-child(2) > #login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//div[@id='j-user_auth']/div/form/ul/li[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b18cbf5-f1ce-4bd9-bfa3-959a7ede13e1",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(6) > .login_open",
+      "targets": [
+        ["css=li:nth-child(6) > .login_open", "css:finder"],
+        ["xpath=//a[contains(text(),'Регистрация')]", "xpath:link"],
+        ["xpath=//div[@id='j-user_auth']/div/form/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b53dab0-2fc6-4e24-9cea-e6a5971e2d10",
+      "comment": "",
+      "command": "click",
+      "target": "css=.b-user_auth_wrap:nth-child(2) > .b-close_popup",
+      "targets": [
+        ["css=.b-user_auth_wrap:nth-child(2) > .b-close_popup", "css:finder"],
+        ["xpath=//div[@id='j-user_reg']/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "d9de974d-60ef-4a6a-b0ac-647c01c9517b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["50e681c6-e1c4-4430-b111-e7505f2acc6e"]
+  }],
+  "urls": ["https://www.abw.by/"],
+  "plugins": []
+}
