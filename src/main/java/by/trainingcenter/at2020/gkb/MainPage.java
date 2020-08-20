@@ -9,6 +9,10 @@ public class MainPage extends Page {
 
     private String pageUrl = "http://6gkb.by/";
 
+    public WebElement getKdlInstagram() {
+        return kdlInstagram;
+    }
+
     @FindBy(xpath = "//*[@id=\"tm-top-a\"]/div/section/div/div[2]/div/div[1]/div[1]/p/a/img")
     private WebElement kdlInstagram;
 
@@ -23,7 +27,7 @@ public class MainPage extends Page {
         return pageUrl;
     }
 
-    public void clickKDLInstagram(){
+    public void clickKDLInstagram() {
         kdlInstagram.click();
     }
 

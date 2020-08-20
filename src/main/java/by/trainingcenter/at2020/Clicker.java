@@ -13,11 +13,9 @@ public class Clicker {
         try {
             wait.until(ExpectedConditions.elementToBeClickable(by));
             driver.findElement(by).click();
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Element not clickable" + e);
-        }
-        finally {
+        } finally {
             driver.close();
         }
     }
