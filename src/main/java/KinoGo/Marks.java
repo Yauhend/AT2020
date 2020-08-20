@@ -39,6 +39,8 @@ public class Marks {
         WebElement markpage =driver.findElement(By.cssSelector("body > div.wrapper > div > div.header > div.header44 > div.user_panel > div > a:nth-child(3)"));
         markpage.click();
         Thread.sleep(2000);
+        driver.navigate().refresh();
+        Thread.sleep(2000);
         driver.close();
     }
 }

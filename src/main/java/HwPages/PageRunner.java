@@ -10,12 +10,12 @@ public class PageRunner {
 
         Main_Page mainPage =new Main_Page();
         mainPage.clickOnLogButton();
-
-//        LoginPage.typeEmail("email");
-//                  .typePassword("password");
-//                  .clickEnterButton();
-//        LoginPage.printMessage();
-//        driver.close();
+    LoginPage loginPage= new LoginPage();
+        loginPage.typeEmail("email")
+                 .typePassword("password")
+                 .clickEnterButton();
+        loginPage.printMessage();
+         driver.close();
     }
     //Написать кратко
     //1. Открыть страницу------
