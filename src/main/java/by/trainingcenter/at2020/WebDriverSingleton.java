@@ -19,4 +19,8 @@ public class WebDriverSingleton {
         return driver;
     }
 
+    public static void killDriver() {
+        driver = null;
+    }
+
 }

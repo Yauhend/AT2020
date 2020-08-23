@@ -23,25 +23,25 @@ public class MailPage {
     @FindBy(xpath = "//*[@id=\"form\"]/fieldset/strong")
     private WebElement message;
 
-    public MailPage(){
+    public MailPage() {
         PageFactory.initElements(driver, this);
     }
 
-    public MailPage typeName(String name){
+    public MailPage typeName(String name) {
         nameInput.sendKeys(name);
         return this;
     }
 
-    public MailPage typePassword(String password){
+    public MailPage typePassword(String password) {
         passwordInput.sendKeys(password);
         return this;
     }
 
-    public void clickSubmit(){
+    public void clickSubmit() {
         submitBtn.click();
     }
 
-    public void printMessage(){
+    public void printMessage() {
         System.out.println(message.getText());
     }
 
