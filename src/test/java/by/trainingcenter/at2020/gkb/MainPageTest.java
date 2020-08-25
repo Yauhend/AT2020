@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MainPageTest {
     WebDriver driver;
-    MainPage mainPage;
+    ScoolPage mainPage;
 
     @BeforeEach
     void setUp() {
@@ -24,9 +24,14 @@ public class MainPageTest {
     @Test
     void checkTitle() {
         String title = driver.getTitle();
-        assertEquals("Учреждение здравоохранения « 6-я городская клиническая больница г. Минска»", title);
+        assertEquals("«Средняя школа №73 города Минска»", title);
     }
 
+    @Test
+    void checkTitle() {
+        String title = driver.getTitle();
+        assertEquals("«Средняя школа №73 города Минска»", TITLE);
+    }
     @Test
     void instagramLinkIsDisplayed() {
         WebElement kdlInstagram = mainPage.getKdlInstagram();
