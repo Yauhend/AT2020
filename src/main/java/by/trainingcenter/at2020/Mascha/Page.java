@@ -1,9 +1,16 @@
+package by.trainingcenter.at2020.Mascha;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
 import java.util.Collection;
 import java.util.List;
 
 public abstract class Page {
 
-    @FaindBy (xpath = "//a[text () = 'Отделения и службы']")
+    @FindBy(xpath = "//a[text () = 'Отделения и службы']")
     protected WebElement otdeleniyaisluzhbyLink;
 
     protected WebDriver driver;
@@ -14,7 +21,7 @@ public abstract class Page {
     @FindBy (xpath = "/html/body/div[5]/div/div/div/main/article/div/div/div[1]/div/div")
     List<WebElement> ukpanelItems;
 
-    public Page (WebDriver) {
+    public Page (WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements (driver,this);
 
@@ -26,7 +33,7 @@ public abstract class Page {
     }
 
     public void clickotdeleniyaisluzhbyLink() {
-        otdeleniyaisluzhbyLink.clic();
+        otdeleniyaisluzhbyLink.click();
             }
 
     public List<WebElement> getOtdeleniyaisluzhbyItems() {
