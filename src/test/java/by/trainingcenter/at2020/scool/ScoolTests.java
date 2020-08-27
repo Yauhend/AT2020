@@ -20,7 +20,10 @@ public class ScoolTests {
 
     private static final List<String> MENU_ITEMS = new ArrayList<>();
 
-    {
+    private static final String EXPECTED_URL = "http://sch73.minsk.edu.by/ru/main.aspx";
+    private static final String EXPECTED_TITLE = "Средняя школа №73 г. Минска";
+
+    private void setList() {
         MENU_ITEMS.add("Одно окно");
         MENU_ITEMS.add("Об учреждении");
         MENU_ITEMS.add("Учительская");
@@ -44,31 +47,62 @@ public class ScoolTests {
     }
 
 
+
     private WebDriver driver;
     private ScoolPage page;
 
     @BeforeEach
     void setUp() {
         driver = WebDriverSingleton.getDriver();
-        page = new ScoolPage(driver);
-        page.open();
     }
 
     @Test
     void checkTitle() {
+        createOpenPageSchoolPage();
         String realTitle = page.getTitle();
         Assertions.assertEquals(PAGE_TITLE, realTitle);
     }
 
     @Test
     void checkMenuItems() {
+        createOpenPageSchoolPage();
+        setList();
         List<String> realMenuItems = page.getMenuItems();
         Assertions.assertEquals(MENU_ITEMS, realMenuItems);
+    }
+
+    @Test
+    void checkNavigation1() {
+        createOpenPageSchoolPage();
+        AboutPage aboutPage = page.clickAboutLink();
+        aboutPage.clickOnMainPageButton();
+        Assertions.assertEquals(EXPECTED_URL, driver.getCurrentUrl());
+    }
+
+    @Test
+    void checkNavigation2() {
+        createOpenPageSchoolPage();
+        AboutPage aboutPage = page.clickAboutLink();
+        aboutPage.clickOnMainButton();
+        Assertions.assertEquals(EXPECTED_URL, driver.getCurrentUrl());
+    }
+
+    @Test
+    void checkNavigation3() {
+        createOpenPageSchoolPage();
+        AboutPage aboutPage = page.clickAboutLink();
+        aboutPage.clickOnHomeButton();
+        Assertions.assertEquals(EXPECTED_TITLE, driver.getTitle());
     }
 
     @AfterEach
     void coolDown() {
         driver.close();
         WebDriverSingleton.killDriver();
+    }
+
+    private void createOpenPageSchoolPage() {
+        page = new ScoolPage(driver);
+        page.open();
     }
 }

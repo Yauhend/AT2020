@@ -20,7 +20,7 @@ public class ScoolPage {
     @FindBy(xpath = "//*[@id=\"h_menu\"]/ul/li/a")
     List<WebElement> menuItems;
 
-    @FindBy(xpath = "#h_menu > ul > li:nth-child(2) > a")
+    @FindBy(xpath = "//*[@id=\"h_menu\"]/ul/li[2]/a")
     WebElement aboutLink;
 
     public ScoolPage(WebDriver d) {
