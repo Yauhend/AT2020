@@ -20,6 +20,9 @@ public class ScoolPage {
     @FindBy(xpath = "//*[@id=\"h_menu\"]/ul/li/a")
     List<WebElement> menuItems;
 
+    @FindBy(xpath = "#h_menu > ul > li:nth-child(2) > a")
+    WebElement aboutLink;
+
     public ScoolPage(WebDriver d) {
         this.driver = d;
         PageFactory.initElements(driver, this);
@@ -40,6 +43,11 @@ public class ScoolPage {
 
     public String getTitle(){
         return logoScool.getText();
+    }
+
+    public AboutPage clickAboutLink(){
+        aboutLink.click();
+        return new AboutPage(driver);
     }
 
 }

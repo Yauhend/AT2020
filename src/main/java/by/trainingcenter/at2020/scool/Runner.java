@@ -8,10 +8,13 @@ public class Runner {
         WebDriver driver = WebDriverSingleton.getDriver();
         ScoolPage scoolPage = new ScoolPage(driver);
         scoolPage.open();
-        System.out.println(scoolPage.getTitle()); //выдаёт маленькими буквами
-        ScoolSteps.printTitleCapital(scoolPage); //выдает лого большими буквами
-        System.out.println("-----------");
-        System.out.println(scoolPage.getMenuItems()); //выдает все окна
-        ScoolSteps.printMenuAlthabetical(scoolPage); //выдает окна в алфавитном порядке
+//        System.out.println(scoolPage.getTitle()); //выдаёт маленькими буквами
+//        ScoolSteps.printTitleCapital(scoolPage); //выдает лого большими буквами
+//        System.out.println("-----------");
+        for (String s:scoolPage.getMenuItems()) {
+            System.out.println("MENU_ITEMS.add(\"" + s + "\");");
+        }
+        ;//выдает все окна
+//        ScoolSteps.printMenuAlthabetical(scoolPage); //выдает окна в алфавитном порядке
     }
 }
