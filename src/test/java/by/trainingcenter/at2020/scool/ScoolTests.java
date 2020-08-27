@@ -20,7 +20,11 @@ public class ScoolTests {
 
     private static final List<String> MENU_ITEMS = new ArrayList<>();
 
-    {
+    private static final String EXPECTED_TITLE = "Средняя школа №73 г. Минска";
+
+    private static final String EXPECTED_URL = "http://sch73.minsk.edu.by/ru/main.aspx";
+
+    private void setList() {
         MENU_ITEMS.add("Одно окно");
         MENU_ITEMS.add("Об учреждении");
         MENU_ITEMS.add("Учительская");
@@ -47,28 +51,57 @@ public class ScoolTests {
     private WebDriver driver;
     private ScoolPage page;
 
-    @BeforeEach
+    @BeforeEach             //выполняется перед каждым тестом
     void setUp() {
         driver = WebDriverSingleton.getDriver();
-        page = new ScoolPage(driver);
-        page.open();
     }
 
     @Test
     void checkTitle() {
+        createOpenScoolPage();
         String realTitle = page.getTitle();
         Assertions.assertEquals(PAGE_TITLE, realTitle);
     }
 
     @Test
     void checkMenuItems() {
+        createOpenScoolPage();
+        setList();
         List<String> realMenuItems = page.getMenuItems();
         Assertions.assertEquals(MENU_ITEMS, realMenuItems);
     }
 
+    @Test
+    void checkNav1(){
+        createOpenScoolPage();
+        AboutPage aboutPage = page.clickAboutLink();
+        aboutPage.clickMainPage();
+        Assertions.assertEquals(EXPECTED_URL,driver.getCurrentUrl());
+    }
+
+    @Test
+    void checkNav2(){
+        createOpenScoolPage();
+        AboutPage aboutPage = page.clickAboutLink();
+        aboutPage.clickMainTwoPage();
+        Assertions.assertEquals(EXPECTED_TITLE,driver.getTitle());  //создание константы Refactor->Extractor
+    }
+
+    @Test
+    void checkNav3(){
+        createOpenScoolPage();
+        AboutPage aboutPage = page.clickAboutLink();
+        aboutPage.clickMainThreePage();
+        Assertions.assertEquals(EXPECTED_TITLE,driver.getTitle());
+    }
     @AfterEach
     void coolDown() {
         driver.close();
         WebDriverSingleton.killDriver();
+    }
+
+    private void createOpenScoolPage() {
+        page = new ScoolPage(driver);
+        page.open();
     }
 }
