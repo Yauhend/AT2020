@@ -1,0 +1,148 @@
+{
+  "id": "d2c01e82-07bc-4152-83d0-835af764e378",
+  "version": "2.0",
+  "name": "Test dz1",
+  "url": "https://www.tut.by",
+  "tests": [{
+    "id": "680763f9-15fc-41e6-a6b3-78469709e4db",
+    "name": "Test2",
+    "commands": [{
+      "id": "87651a4b-3533-4ead-b8bc-1c945add6ff4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8c844f7e-ce66-4315-954e-60ecde1fa98f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4be6c038-4504-48db-b910-7f4060546a82",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.b-topc-hot-c:nth-child(1) .entry-pic",
+      "targets": [
+        ["css=.b-topc-hot-c:nth-child(1) .entry-pic", "css:finder"],
+        ["xpath=//div[@id='title_news_block']/div[2]/div/div/div/div/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4f7dd42-5c6f-41b2-aec7-0627409ca2e7",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.inform-i:nth-child(1) > .inform-text",
+      "targets": [
+        ["css=.inform-i:nth-child(1) > .inform-text", "css:finder"],
+        ["xpath=//a/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc42ff10-2cc6-4826-a879-37b992cde29e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.inform-i:nth-child(1) > .inform-text",
+      "targets": [
+        ["css=.inform-i:nth-child(1) > .inform-text", "css:finder"],
+        ["xpath=//a/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "293b6476-bc4a-498e-b386-7aa7a7f78390",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inform-i:nth-child(2) > .inform-text",
+      "targets": [
+        ["css=.inform-i:nth-child(2) > .inform-text", "css:finder"],
+        ["xpath=//a[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "777fb999-9c8c-4b5d-9839-f894e6cbc549",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,497)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb080ebe-8cdb-42d2-88eb-f9ca131806b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.candidate__item:nth-child(4) .candidate__title",
+      "targets": [
+        ["css=.candidate__item:nth-child(4) .candidate__title", "css:finder"],
+        ["xpath=//div[@id='content-band']/div/div/div/div[3]/div[2]/div[4]/div/a/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/a/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b2d72d3-5037-4f61-b655-b807e068d0de",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Все новости про Светлану Тихановскую",
+      "targets": [
+        ["linkText=Все новости про Светлану Тихановскую", "linkText"],
+        ["css=#candidate11 .full-info", "css:finder"],
+        ["xpath=//a[contains(text(),'Все новости про Светлану Тихановскую')]", "xpath:link"],
+        ["xpath=//div[@id='candidate11']/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://news.tut.by/tag/ex462687-svetlana-tikhanovskaya.html')]", "xpath:href"],
+        ["xpath=//div[4]/div/div/div/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Все новости про Светлану Тихановскую')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "edd121b5-adf4-443e-ba5e-b0dc228ce8e1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nip:nth-child(1) .entry-head",
+      "targets": [
+        ["css=.nip:nth-child(1) .entry-head", "css:finder"],
+        ["xpath=//div[@id='content-band']/div[2]/div/div/div[2]/div/a[2]/span/span", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div[2]/div/div/div[2]/div/a[2]/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c83220c-99b4-4ad3-9796-e849b55c380e",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,390)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8037d2af-da4d-4e44-b2df-78e4885e7252",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,662)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ecab34d-9d37-45fc-bae9-e1518562b33e",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1779)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a73f5573-7e7f-4925-8c0a-e565513c44f3",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,4714)",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ac033db2-50d1-4a97-aba2-120d8c1188bd",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["680763f9-15fc-41e6-a6b3-78469709e4db"]
+  }],
+  "urls": ["https://www.tut.by/"],
+  "plugins": []
+}
